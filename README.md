@@ -1,2 +1,1 @@
-# ecnhep-nuxt
-Enchep Cooking Web made with Nuxt 3
+# Enchep Cooking Web made with Nuxt 3
