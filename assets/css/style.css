@@ -1,0 +1,930 @@
+@font-face {
+    font-family: baguet;
+    src: url('../font/reg.otf');
+}
+
+@font-face {
+    font-family: baguet-thin;
+    src: url('../font/thin.otf');
+}
+
+@font-face {
+    font-family: baguet-bold;
+    src: url('../font/bold.otf');
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    transition: all 0.2s ease;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.nav-active {
+    background: rgba(15, 23, 43, 0.904);
+}
+
+.logo img {
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover, .menu li a.router-link-exact-active, .atas a:hover, .item .item-text a:hover  {
+    color: #fea116;
+}
+
+.auth a:hover {
+    color: #0F172B;
+    cursor: pointer;
+}
+
+.auth {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    color: white;
+    height: 40px;
+    padding: 0 30px;
+    background: #fea116;
+    font-size: 15px;
+    align-items: center;
+    border-radius: 50px;
+    gap: 15px;
+}
+
+.auth a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* HEADER */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+    padding-top: 30px;
+    color: #fff;
+}
+
+header h1 {
+    font-family: baguet-bold;
+    font-size: 3rem;
+}
+
+header img.head-img {
+    width: 400px;
+    animation: mover .9s infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+header .kiri {
+    width: 45%;
+}
+
+.kiri h2 {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    line-height: 2rem;
+}
+
+/* HEADER resep */
+.header-resep {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url("../img/ayam-bakar.jpg");
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-resep form {
+    background: transparent;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    outline: none;
+}
+
+.header-resep input {
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    width: 85%;
+}
+
+.header-resep form img {
+    width: 20px;
+    filter: invert(1);
+}
+
+/* HEADER tentang */
+.header-tentang {
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url("../img/gambar3.jpg");
+    background-position: 0 -300px;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: #fff;
+}
+
+footer .atas {
+    background: darkblue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+footer .atas .item {
+    display: flex;
+    font-family: Arial;
+    align-items: center;
+    gap: 10px;
+}
+
+.items.sosmed {
+    margin-top: -10px;
+}
+
+.item .item-text {
+    font-size: 14px;
+    line-height: 5px;
+}
+
+.item .item-text a {
+    font-family: baguet;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+footer .atas img {
+    height: 40px;
+    width: 40px;
+}
+
+footer .atas {
+    display: flex;
+    gap: 200px;
+    background: #0F172B;
+}
+
+.atas h2 {
+    font-family: baguet-bold;
+}
+
+.atas li {
+    list-style: circle;
+    margin-left: -22px;
+    margin-bottom: 7px;
+    font-family: Arial;
+    transition: all 0.3s ease;
+}
+
+.atas li a {
+    color:#fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bawah {
+    background: #0F172B;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px -4px 8px -1px rgba(0,0,0,0.75);
+    box-sizing: border-box;
+    font-family: baguet;
+}
+
+.bawah .copy {
+    margin-bottom: -13px;
+}
+
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    font-family: baguet;
+    font-size: 2.8rem;
+    margin-bottom: 80px;
+    border-bottom: 4px solid black;
+}
+
+main .cards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cards .card {
+    width: 18%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.7);
+    transition: all .5s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 20px;
+    padding: 0 20px;
+    text-align: center;
+    font-family: baguet;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    scale: 1.05;
+}
+
+.selengkapnya {
+    font-family: 'Arial';
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+/* MAIN resep */
+
+.main-resep .cards {
+    margin-top: 70px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.main-resep .card {
+    width: 40%;
+    flex-direction: row;
+}
+
+.main-resep .card img {
+    border-radius: 20px 0 0 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.main-resep .card h2 {
+    text-align: left;
+    margin-bottom: -5px;
+    margin-left: 5px;
+}
+
+.main-resep .card a {
+    margin-left: 25px;
+    color: black;
+    transition: all 0.2s ease;
+    font-size: .95rem;
+}
+
+.main-resep .card a:hover {
+    color: #fea116;
+    text-decoration: none;
+}
+
+/* MAIN tentang */
+.main-tentang {
+    padding: 50px 0;
+    min-height: 50vh;
+}
+
+.main-tentang h1 {
+    border: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card-tentang {
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.7);
+    border-radius: 20px;
+    padding: 5px 50px;
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+.card-tentang-text {
+    display: flex;
+    padding: 0 20px;
+    margin-top: -60px;
+    gap: 50px;
+    text-align: justify;
+}
+
+.daft {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.daft-tomb {
+    text-decoration: none;
+    color: white;
+    background: #0F172B;
+    padding: 7px 25px;
+    border-radius: 13px;
+}
+
+.daft-tomb:hover {
+    filter: brightness(2);
+}
+
+/* MAIN resep */
+.card-resep {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.7);
+    border-radius: 20px;
+    margin: 150px 0;
+    padding-bottom: 30px;
+}
+
+.card-resep .img {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: 0 -150px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.card-resep li {
+    margin-bottom: 10px;
+}
+
+.card-resep .img h1 {
+    border: none;
+    text-align: center;
+    text-shadow: 5px 5px 10px #000000d4;
+    margin-bottom: -15px;
+    font-size: 3rem;
+}
+
+.card-resep .img p {
+    font-family: Arial;
+    text-align: center;
+    text-shadow: 5px 5px 5px #000000e0;
+    font-size: 1.2rem;
+}
+
+.card-resep .bahan, .card-resep .langkah {
+    align-self: flex-start;
+    padding: 0 50px;
+}
+
+/* DAFTAR */
+.daftar {
+    height: 100vh;
+    flex-direction: row;
+}
+
+.daftar .kiri {
+    width: 55%;
+    background: #0F172B;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daftar form {
+    background: #fff;
+    width: 75%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 60px;
+    padding-bottom: 35px;
+}
+
+.daftar h1 {
+    border: none;
+    font-family: baguet-thin;
+    margin-bottom: 30px;
+}
+
+.daftar .fg {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: Arial;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    width: 60%;
+}
+
+.fg span {
+    color: red;
+}
+
+.fg input {
+    border: 1.2px solid #0F172B;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+}
+
+.daftar p {
+    align-self: flex-start;
+    margin-left: 20%;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.daftar p a {
+    color: #0F172B;
+}
+
+.log-tom button {
+    width: 120px;
+    margin-right: 15px;
+    font-weight: bolder;
+    padding: 5px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #0F172B;
+    color: #0F172B;
+    background: transparent;
+}
+
+.log-tom button.submit {
+    background: #0F172B;
+    color: white;
+}
+
+.log-tom button.submit:hover {
+    background: transparent;
+    color: #0F172B;
+    cursor: pointer;
+}
+
+.log-tom button.batal:hover {
+    background: #0F172B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.daftar .kanan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+}
+
+.daftar .maskot {
+    width: 400px;
+    animation: mover .9s infinite alternate;
+}
+
+/* masuk */
+.masuk {
+    height: 100vh;
+    flex-direction: row;
+}
+
+.masuk .kiri {
+    width: 45%;
+    background: #fff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.masuk form {
+    background: #fff;
+    width: 75%;
+    padding-bottom: 35px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 60px;
+}
+
+.masuk h1 {
+    border: none;
+    font-family: baguet-thin;
+    margin-bottom: 30px;
+}
+
+.masuk .fg {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: Arial;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    width: 60%;
+}
+
+.fg span {
+    color: red;
+}
+
+.fg input {
+    border: 1.2px solid #0F172B;
+    border-radius: 7px;
+    padding: 6px;
+}
+
+.masuk p {
+    align-self: flex-start;
+    margin-left: 20%;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.masuk p a {
+    color: #0F172B;
+}
+
+.log-tom button {
+    width: 120px;
+    margin-right: 15px;
+    font-weight: bolder;
+    padding: 5px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #0F172B;
+    color: #0F172B;
+    background: transparent;
+}
+
+.log-tom button.submit {
+    background: #0F172B;
+    color: white;
+}
+
+.log-tom button.submit:hover {
+    background: transparent;
+    color: #0F172B;
+    cursor: pointer;
+}
+
+.log-tom button.batal:hover {
+    background: #0F172B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.masuk .kanan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 100vh;
+    background: #0F172B;
+}
+
+.masuk .maskot {
+    width: 400px;
+    animation: mover .9s infinite alternate;
+}
+
+/* NAVBAR auth */
+nav .menu .prof img {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 4px;
+}
+
+/* BERANDA PROFIL auth */
+.profil-main .top {
+    display: flex;
+    width: 60%;
+    border: 1.3px solid #0F172B;
+    border-radius: 30px;
+    padding: 20px 50px;
+    margin-top: 150px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: baguet;
+}
+
+.profil-main .top h2 {
+    margin-bottom: -10px;
+}
+
+.profil-main .top img.prof2 {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1.3px solid #0F172B;
+    padding: 5px;
+}
+
+.profil-main .top img.lg {
+    width: 140px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: flex-end;
+}
+
+.profil-main .top a {
+    text-decoration: none;
+    color: white;
+    background: #0F172B;
+    border-radius: 10px;
+    padding: 4px 50px;
+    font-family: Arial;
+    font-weight: bolder;
+}
+
+.profil-main .top a:hover {
+    border: 1.2px solid #0F172B;
+    background: transparent;
+    cursor: pointer;
+    color: #0F172B;
+}
+
+.profil-main .mid {
+    display: flex;
+    width: 60%;
+    border: 1.3px solid #0F172B;
+    border-radius: 20px;
+    padding: 0 50px;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 50%;
+    align-items: center;
+}
+
+.profil-main .mid a {
+    font-family: baguet;
+    text-decoration: none;
+    color: black;
+}
+.profil-main .mid span {
+    background: #0F172B;
+    color: white;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-family: baguet-thin;
+    margin-left: 5px;
+}
+
+.profil-main .mid a:hover {
+    text-decoration: underline;
+}
+
+
+.profil-main .bot {
+    width: 60%;
+    margin: 30px 0;
+    display: flex;
+    border: none;
+    border-top: 2px dashed #0F172B;
+    border-bottom: 2px dashed #0F172B;
+    padding: 15px 30px;
+}
+.profil-main .bot .kiri {
+    width: 75%;
+}
+
+.profil-main .bot .kiri img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profil-main .bot .kanan img {
+    width: 200px;
+}
+
+.profil-main .bot .prfl {
+    display: flex;
+    align-items: center;
+}
+
+.profil-main .bot h2 {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+.profil-main .bot h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.profil-main .bot h2 a:hover {
+    text-decoration: underline;
+}
+
+.profil-main .bot p {
+    margin-left: 20px;
+}
+
+.buat-main .kiri {
+    width: 55%;
+    background: #0F172B;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buat-main form {
+    background: #0F172B;
+    color: white;
+    margin-top: 120px;
+    width: 70%;
+    height: 85%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 60px;
+    margin-bottom: 30px;
+}
+
+.buat-main h1 {
+    border: none;
+    font-family: baguet-thin;
+    margin-bottom: 30px;
+}
+
+.buat-main .fg {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: Arial;
+    font-weight: bolder;
+    margin-bottom: 12px;
+    width: 60%;
+}
+
+.fg span {
+    color: red;
+}
+
+.fg input {
+    border: 1.2px solid #fff;
+    color: white;
+    background: #0F172B;
+    border-radius: 7px;
+    padding: 6px;
+}
+
+.fg textarea {
+    border: 1.2px solid #fff;
+    color: white;
+    background: #0F172B;
+    border-radius: 7px;
+    padding: 6px;
+    height: 100px;
+}
+
+.buat-main .log-tom button {
+    width: 120px;
+    margin-right: 15px;
+    font-weight: bolder;
+    padding: 5px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.buat-main .log-tom button.submit {
+    background: white;
+    color: #0F172B;
+}
+
+.buat-main .log-tom button.submit:hover {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buat-main .log-tom button.hapus {
+    color: red;
+    border: 1px solid red;
+}
+
+.buat-main .log-tom button.hapus:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.buat-main .log-tom button.batal:hover {
+    background: #fff;
+    color: #0F172B;
+    cursor: pointer;
+}
+
+.buat-main .log-tom {
+    margin-bottom: 30px;
+}
+
+.buat-main p {
+    align-self: flex-start;
+    margin-left: 20%;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+.buat-main p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.buat-main p a:hover {
+    text-decoration: underline;
+}
