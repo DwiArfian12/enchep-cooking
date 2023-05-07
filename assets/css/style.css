@@ -327,6 +327,9 @@ main .cards {
 }
 
 /* MAIN resep */
+.main-resep {
+    padding-bottom: 100px;
+}
 
 .main-resep .cards {
     margin-top: 70px;
